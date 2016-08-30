@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <title>卡片滑动</title>
+    <link rel="stylesheet" href="../demo/static/css/reset.css">
+    <link rel="stylesheet" href="../demo/static/css/demo01.css">
+    <script>
+        var rem;
+        ;
+        (function () {
+            function setRem() {
+                var curWidth = document.documentElement.clientWidth || window.screen.width
+                var basicWidth = 375
+                var basicFontSize = 62.5
+                var calcFontSize = curWidth / basicWidth * basicFontSize
+                document.documentElement.style.fontSize = calcFontSize + '%'
+                rem = calcFontSize / 62.5
+            }
+            setRem()
+            window.addEventListener('resize', function () {
+                setRem()
+            })
+        })()
+    </script>
+</head>
+<body>
+<div class="sub-nav">
+    <div id="sub-con" class="sub-con">
+        <ul class="clearfix">
+            <li class="item kind">
+                <div class="contain">
+                    <p class="sub-tit">宣传展示</p>
+                    <p class="sub-txt">形象完美展示,提高客户好感度和信任度</p>
+                </div>
+            </li>
+            <li>
+                <div class="sub-line"></div>
+            </li>
+            <li class="item object">
+                <div class="contain">
+                    <p class="sub-tit">购物网店</p>
+
+                    <p class="sub-txt">接入支付宝和微信支付,让客户随时随地完成购物</p>
+                </div>
+            </li>
+            <li>
+                <div class="sub-line"></div>
+            </li>
+            <li class="item market">
+                <div class="contain">
+
+                    <p class="sub-tit">市场成熟</p>
+
+                    <p class="sub-txt">成熟理性的投资者，超过300年透明规范的监管</p>
+                </div>
+            </li>
+            <li>
+                <div class="sub-line"></div>
+            </li>
+            <li class="item ways">
+                <div class="contain">
+                    <p class="sub-tit">分销商场</p>
+                    <p class="sub-txt">多级分销体系,客户变销售,实现快速汇款</p>
+                </div>
+            </li>
+            <li>
+                <div class="sub-line"></div>
+            </li>
+            <li class="item risk">
+                <div class="contain">
+                    <p class="sub-tit">会员积分</p>
+                    <p class="sub-txt">消费的积分,积分换礼,提高客户存留率</p></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/hammer.min.js"></script>
+<script src="static/js/demo01.js"></script>
+</body>
+</html>
